@@ -220,15 +220,11 @@ menuammu = {
     }
 }
 
-RegisterCommand(Config.Commande, function()
-
+keyRegister("TikozOpenAmmu", "Menu F6", "F6", function()
     if ESX.PlayerData.job.name == "ammu" then
         CreateMenu(menuammu)
-    else 
-        ESX.ShowNotification("Cette commande est ~b~~h~réservé~s~ aux ~b~~h~armurier")
     end
-
-end, false)
+end)
 
 Citizen.CreateThread(function()
 
