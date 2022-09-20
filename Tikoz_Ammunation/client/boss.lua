@@ -175,7 +175,7 @@ Citizen.CreateThread(function()
         local menu = Config.Pos.Boss
         local dist = #(pos - menu)
 
-        if dist <= 2 and ESX.PlayerData.job.name == "ammu" then
+        if dist <= 2 and ESX.PlayerData.job.name == "ammu" and ESX.PlayerData.job.grade_name == "boss" then
 
             ESX.ShowHelpNotification('Appuie sur ~INPUT_CONTEXT~ pour ouvrir le ~b~menu')
             DrawMarker(6, menu, nil, nil, nil, -90, nil, nil, 0.7, 0.7, 0.7, 0, 251, 255, 200, false, true, 2, false, false, false, false)
